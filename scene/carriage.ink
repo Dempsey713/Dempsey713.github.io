@@ -124,7 +124,7 @@ As the carriage comes to a halt, you jump out from the carriage.
     "Can we just have some street food and go home?"
     
     {n > 2: 
-        ++ [THEY DON'T LIKE STREET FOOD] -> street_food 
+        ++ [SOMETHING IS UP, THEY DON'T LIKE STREET FOOD] -> street_food 
         ++ [CONVINCE THEM TO STAY A WHILE] -> convince
     
     }

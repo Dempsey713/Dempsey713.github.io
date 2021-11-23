@@ -16,6 +16,7 @@
         }
 }
 
+// need a way to gett to "let die" and "save separate" without partner > 8
 ===save===
 You're coming back home the next day. You see the lights are switched off.
 { shuffle:
@@ -67,6 +68,8 @@ You let them down on the floor slowly.
 You turn around and start walking in the other direction. 
 
 You don't care if they live or die.
+
+END
 -> END
 
 ===save_forgive===
@@ -90,6 +93,7 @@ While you're coming home from the hospital after their discharge, you hold their
 
 Your partner starts crying and hugs you. You hold them tightly.
 
+END
 ->END
 
 
@@ -115,6 +119,7 @@ A few days later, when you're sure that your partner is getting the help they ne
 
 "I'm sorry but I don't think I can be with you anymore. I sincerely wish you the best in the world. But.... this is it...", you tell them as you see the disappointed acceptance in their eyes.
 
+END
 ->END
 
 ===give_up===
@@ -125,6 +130,8 @@ You decide to give up on saving your partner by trying to jump back in time.
 You're an empty shell.
 
 You have accepted your hell.
+
+END
 ->END
 
 ===death_loop===
@@ -140,6 +147,8 @@ You try to kill yourself, but you wake up 4 days before your anniversary no matt
 You're an empty shell.
 
 You have accepted your hell and continue to try and save your partner, knowing you'll fail.
+
+END
 -> END
 
 ===random===
