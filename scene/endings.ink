@@ -7,10 +7,10 @@
         -> random
     - else : 
         {
-            - n>=5 : 
-                -> death_loop
             - (partner >= 8 and cheating_confirmed) or (cheating_confirmed and angry):
                 -> save_or_sunder
+            - n>=5 : 
+                -> death_loop
             - else : 
                 -> random
         }
