@@ -15,9 +15,9 @@ You pull the chair back for your partner and they take a seat. You sit across fr
         "Ah so it was a relaxing day for you then"
         (faintly) "Yeah"
         
-        ** [CALL FOR SOME SERVICE] -> call_server
+        ++ [CALL FOR SOME SERVICE] -> call_server
             
-        ** {n>1} [ASK WHAT'S WRONG] -> whats_wrong
+        ++ {n>1} [ASK WHAT'S WRONG] -> whats_wrong
         
     + "How is your sister doing? I remember she was going through a tough time at work["].".
         "I don't know... I haven't talked to her in a while."

@@ -237,7 +237,7 @@ You keep looking at them, as you absorb what your partner is saying.
 
 "Blake came over to visit one night. I wasn't in the right state of mind... "
 
-They stand their crying uncontrollably. Nothing else needed to be said anymore.
+They start crying uncontrollably. Nothing else needs to be said anymore.
 
 ~ cheating_confirmed = true
 + "HOW COULD YOU DO THIS TO ME!? 
