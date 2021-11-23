@@ -186,9 +186,9 @@ You're coming back home the next day. You see the lights are switched off.
 {n==1: You think of how things were similar to your dream. You remember how you jumped into the water and then woke up in your bed having gone back in time.}
 + [TRAVEL BACK IN TIME]
     ~n++
-    You run to the vortex with all you got.
+    You run to the vortex with everything you have.
     You arrive at the bridge and then dive straight into the water. The lightning vortex forms around you.
-    You wake up in bed again. It's 4 days to go to your anniversary.
+    You wake up in bed again. It's 4 days until to your anniversary.
     .
     .
     .
