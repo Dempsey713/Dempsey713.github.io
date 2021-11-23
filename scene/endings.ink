@@ -9,7 +9,7 @@
         {
             - n>=5 : 
                 -> death_loop
-            - partner <= 8 :
+            - partner < 8 :
                 -> random
             - else : 
                 -> save

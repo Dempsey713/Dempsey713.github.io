@@ -69,7 +69,7 @@ Chronic Dissonance is a dark story about your character's struggle with their pa
     - -> choice
 
 ===choice===
-{n < 2 : You been looking forward to this for a while and can't wait for it to happen finally.} 
+{n < 2 : You've been looking forward to this for a while and can't wait for it to happen finally.} 
 {   
     -n==0 : 
         .

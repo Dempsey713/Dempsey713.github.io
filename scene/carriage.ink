@@ -182,7 +182,7 @@ They break down, crying while saying "I'm so sorry" repeatedly.
 
 + {!cheating_confirmed} "What is up with you? Tell me what I'm doing wrong please." 
                             -> annoyed
-+ {!cheating_confirmed} "Is everythink okay? You know you can talk to me right?" 
++ {!cheating_confirmed} "Is everything okay? You know you can talk to me right?" 
                             -> console
 + {cheating_confirmed} "It's okay. It'll be alright." 
                             "Hey come on now! You didn't do anything wrong", you try and make them feel better.
