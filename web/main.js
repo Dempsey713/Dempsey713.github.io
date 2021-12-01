@@ -126,6 +126,14 @@
                     customClasses.push(splitTag.val);
                 }
 
+                // LIGHTS: on/off
+                else if( splitTag && splitTag.property == "LIGHTS" ) {
+                    if(splitTag.val=="on")
+                        switchTheme(false)
+                    else    
+                        switchTheme(true)   
+                }
+
                 // CLEAR - removes all existing content.
                 // RESTART - clears everything and restarts the story from the beginning
                 else if( tag == "CLEAR" || tag == "RESTART" ) {
@@ -193,7 +201,7 @@
         // Extend height to fit
         // We do this manually so that removing elements and creating new ones doesn't
         // cause the height (and therefore scroll) to jump backwards temporarily.
-        storyContainer.style.height = contentBottomEdgeY()+"px";
+        storyContainer.style.height = (contentBottomEdgeY())+"px";
 
         if( !firstTime )
             scrollDown(previousBottomEdge);
@@ -252,8 +260,9 @@
     // The Y coordinate of the bottom end of all the story content, used
     // for growing the container, and deciding how far to scroll.
     function contentBottomEdgeY() {
+        var imageHidden = storyContainer.children[6].className == "hide";
         var bottomElement = storyContainer.lastElementChild;
-        return bottomElement ? bottomElement.offsetTop + bottomElement.offsetHeight : 0;
+        return bottomElement ? bottomElement.offsetTop + bottomElement.offsetHeight + (imageHidden ? 650 : 0) : 0;
     }
 
     // Remove all elements that match the given selector. Used for removing choices after
@@ -325,11 +334,18 @@
 
         // Check whether the OS/browser is configured for dark mode
         var browserDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-
         if (savedTheme === "dark"
             || (savedTheme == undefined && globalTagTheme === "dark")
             || (savedTheme == undefined && globalTagTheme == undefined && browserDark))
             document.body.classList.add("dark");
+    }
+
+    function switchTheme(setDark){
+        if(setDark)
+            document.body.classList.add("dark");
+        else
+            document.body.classList.remove("dark");
+        console.log(document.body.classList)
     }
 
     // Used to hook up the functionality for global functionality buttons

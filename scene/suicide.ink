@@ -1,3 +1,5 @@
+//This file is the suicide scene, which will essentially be a series of unchoices, that will lead to your partner's suicide at the end of it.
+
 == suicide_beginning ==
 #AUDIOLOOP: audio/1-5.mp3
 On your way back from work, you notice a new gift shop.
@@ -8,8 +10,8 @@ You hope after the date that things will get back to normal soon.
     You get them a beautiful bouquet of flowers
 + [BUY A FRANK SINATRA RECORD] 
     You get them a vinyl record of "The Way You Look Tonight", which is their favorite song of all time
-+ [BUY A PURSE]
-    You get them a vintage magenta purse.
++ [BUY A LOCKET]
+    You get them a vintage gold heart-shaped locket, with your initials carved into it.
 - -> suicide_main
 
 ===suicide_main===
@@ -64,7 +66,7 @@ You call out their name trying to figure out if they're still here.
                     "What're you doing in the dark? I've been calling for you, why didn't you answer?"
                     No response.
                     **** [SWITCH ON THE LIGHTS]
-                        #theme: light
+                        #LIGHTS : on
                         You switch on the lights.
                         
                         ...
@@ -74,7 +76,8 @@ You call out their name trying to figure out if they're still here.
                         
                         *****"This can't be happening" 
                             -> body_down
-                        
+                        *****"No, no no no no no."
+                            -> body_down
 ===body_down===
 You immedietly leap to try and bring your partner's body down. 
 They aren't breathing anymore. You stare blankly at their lifeless face, wishing they would come back to life. 
@@ -82,13 +85,13 @@ You bury your crying face in them.
 * [ADVANCE TIME] -> advance_time
 
 ===advance_time===
-.
-.
+#LIGHTS : off
 .
 .
 .
 It's been a week since your partner's funeral. You haven't left your house or spoken to anyone since the funeral. You are lying in your bed, with pangs of hunger slowly torturing you.
     * [EAT SOMETHING]
+        {break_window : You step on the broken glass from when you broke your window to enter the house. Your foot starts bleeding. You don't feel anything anymore}
         Everything in the fridge has gone bad. It's 2 AM, there is no way to get any groceries. You take the car out to get some take-out from your partner's favorite place. 
         On the way you cross the Manhattan bridge. You stop by to look at the water. That was your favorite spot to visit. It has lost all it's charm though. The beautiful sound of the water has been replaced with emptiness. 
         **[CLIMB UP THE RAILING] 
@@ -105,14 +108,11 @@ You see the lights fading away.
 .
 .
 .
-.
-.
     * [OPEN YOUR EYES]
     You wake up in your bed. There's a note next to you.
     "Hey sleepy. I have to get to work early today. I'll see you at dinner. xoxo"
-    
-    You check the calender. It's 4 days before your anniversary. You think you might be dreaming. You pinch yourself, slap your self, trying every possible way to wake yourself up. Nothing changes.
-    "Was all of that a dream? It felt way too real to me.", you think to yourself.
-    ~n=1
-    // You think about your anniversary date. "Maybe something happened then. Maybe I can change something."
-    -> intro
+        ** [WHAT THE HELL!?]
+        You check the calender. It's 4 days before your anniversary. You think you might be dreaming. You pinch yourself, slap your self, trying every possible way to wake yourself up. Nothing changes.
+        "Was all of that a dream? It felt way too real to me.", you think to yourself.
+        ~n=1
+        -> intro

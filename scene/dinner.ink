@@ -69,12 +69,9 @@ The waiter comes along to ask you about your order. Your partner orders Pan-frie
         "I'll have a Ragu alla Bolognese with a side of steamed carrots and french beans"
         {negative(1)}
         -> conversation
-        // Write some subsequent dialogue
     + [ASK THEM IF SOMETHING IS WRONG]
         "What happened? Why aren't you ordering your usual Risotto Alla Milanese?"
         -> whats_wrong_from_food
-        // Write some subsequent dialogue
-
 
 ===whats_wrong_from_food===
 {positive(1)}
@@ -97,9 +94,9 @@ The waiter comes along to ask you about your order.
 
     + [ASK FOR THEIR FAVORITE]
         "I'll have a Ragu alla Bolognese with a side of steamed carrots and french beans and a Risotto Alla Milanese for this beautiful person in front of me"
-        {negative(1)}
-    + [ASK WHAT THEY WOULD LIKE]
         {positive(1)}
+    + [ASK WHAT THEY WOULD LIKE]
+        {negative(1)}
         Your partner looks at you. "I really don't feel like having my favorite tonight. If that's okay"
         "Sure thing! Order whatever you like"
         They order Pan-fried potatoes with a side of veggies.
@@ -133,7 +130,7 @@ The waiter comes along to ask you about your order.
 
     
 ===conversation2===
-+{evidence_found}[TALK ABOUT THE TEXT YOU SAW]
++{evidence_found and !cheating_confirmed}[TALK ABOUT THE TEXT YOU SAW]
     -> accuse
 +{!evidence_found or cheating_confirmed}[APOLOGISE FOR NOT HAVING BEEN THERE FOR YOUR PARTNER]
     -> apologise
@@ -187,7 +184,7 @@ You take a long walk, trying to think of what to do.
 .
 .
 .
-You go back home. You enter your room and see your partner crying in the bed. Her mascara has rolled all the way down her cheeks.
+You go back home. You enter your room and see your partner crying in the bed. Their mascara has rolled all the way down their cheeks.
 + [GO TO SLEEP WITHOUT SAYING ANYTHING]
     {(negative(3))}
     ~angry = true
@@ -196,26 +193,26 @@ You go back home. You enter your room and see your partner crying in the bed. He
     "We'll talk about this tomorrow. I'm not there yet, but I think I can forgive you. Please stop crying. It's late and we should go to bed."
     "I love you", you whisper to her.
     
-    She gives you a surprised look initially, which turns into a slight smile.
+    They gives you a surprised look initially, which turns into a slight smile.
     
     You go to bed praying that things don't turn out the same way this time.
 -   -> time_ending
 
 ===walk===
 {positive(2)}
-You take a walk through China Town. You used to come here often when you started dating. It all feels like it happened yesterday. Your partner was extremely fond of the food stands, all the restaurants restaurants along with the stores selling ancient artifact replicas. They alwasy had an interest in Chinese history and so this place meant a lot to them.
+You take a walk through China Town. You used to come here often when you started dating. It all feels like it happened yesterday. Your partner was extremely fond of the food stands, all the restaurants restaurants along with the stores selling ancient artifact replicas. They always had an interest in Chinese history and so this place meant a lot to them.
 
 You walk all the way to the Manhattan bridge, which is you and your partner's favorite spot. You put your arm around their shoulder and they gently nestle onto your shoulder. You have a really positive feeling about the night. You hope that things get better after this. 
-
-You head back home. You kiss your partner good night and you both go to sleep.
--> evidence_check
++   [HEAD BACK HOME]
+    You head back home. You kiss your partner good night and you both go to sleep.
+    -> evidence_check
 
 ===home_direct===
 You go back home with your partner. 
 { 
     - TURNS_SINCE(->accuse) == 1 : Both of you stay silent the whole way. You think hard about what to do. You think about how big the betrayal is, and whether you can forgive them for it.   
     - n<2 : 
-    Things feel very disconnected and you keep on wondering what you could have done to change them. Your partner goes to your room and goes to bed directly.
+    Things feel very disconnected and you keep on wondering what you could have done to help them. Your partner goes to your room and goes to bed directly.
     - else : 
     You go to bed praying that things don't turn out the same way this time. You keep on replaying the night in your head, thinking of what can be done differently. 
 }
@@ -240,9 +237,9 @@ You're barely able to sleep due to your anxiety, just when you hear a low chime 
         You try to scroll up but the only other text in the chain is the one your partner sent earlier in the evening
         {
             - partner >= 7 :
-                "I can't do this to him anymore", read the text.
+                "I can't do this to them anymore", read the text.
             - else :
-                "It isn't working anymore", read the text.
+                "I shouldn't have done this.", read the text.
         }
         You think it's strange that these are the only two texts in the chain.
         ~evidence_found = true

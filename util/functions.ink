@@ -2,6 +2,7 @@
 	~ return TURNS_SINCE(x) == 0
 
 === function positive(num)
+    //This function will increment your partner's positivty level.
     {   partner+num <= 10:
 		    ~ partner+=num
 		-else:
@@ -10,6 +11,7 @@
     {play_music()}
     
 === function negative(num)
+    //This function will decrement your partner's positivty level.
     {   partner-num >= 0:
 		    ~ partner-=num
 	    -else:
@@ -56,7 +58,6 @@
         - not angry and (partner >= 8) and n==3: #AUDIOLOOP: audio/1-3.mp3
         - not angry and (partner >= 8) and n==4: #AUDIOLOOP: audio/1-4.mp3
         - not angry and (partner >= 8) and n==5: #AUDIOLOOP: audio/1-5.mp3
-
     // catch all in case the function breaks
         - else:     #AUDIOLOOP: audio/3-1.mp3
     }

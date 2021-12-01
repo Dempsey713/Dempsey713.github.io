@@ -17,9 +17,6 @@ You open the door to reveal a posh horse carriage attached to one of the most ma
 + "It wasn't a big deal."
     {negative(1)}
 - -> inside_carriage
-//"You're right, I didn't 'have' to; I wanted to", you say with a smile as you hug your partner.
-
-//<Open the door for them or let them open the door? - options>
 
 === inside_carriage ===
 You settle in, sitting opposite each other.
@@ -36,10 +33,10 @@ You see that your partner is admiring the carriage itself.
     {positive(1)}
     "Umm I don't know", they said, the surprise still setting in.
     "Pick a number then!"
-        ** (one) 1
-        ** (two) 2
-        ** (three) 3
-        ** (four) 4
+        ++ (one) 1
+        ++ (two) 2
+        ++ (three) 3
+        ++ (four) 4
         -- -> signal_coachman
 
 
@@ -104,7 +101,7 @@ As you reach the spot, your partner begins to notice all the lighting you've set
 
 "Did you do all this?", they ask.
 
-"I had some help :)".
+"I had some help", you say, smiling.
 
 As the carriage comes to a halt, you jump out from the carriage.
 
@@ -145,7 +142,7 @@ You head home. Your partner says nothing on the way back.
 When you get back, your partner changes their clothes and without saying a word, go to bed.
 { 
     - n<2 : 
-    Things feel very disconnected and you keep on wondering what you could have done to change them. 
+    Things feel very disconnected and you keep on wondering what you could have done to help them. 
     - else : 
     You go to bed praying that things don't turn out the same way this time. You keep on replaying the night in your head, thinking of what could be done differently. 
 }
@@ -229,7 +226,7 @@ You stroke their back and let them know you're there for them.
 "Hey come on now! You didn't do anything wrong", you try and make them feel better.
 (Still crying) "I have.. I have done a horribe thing"
 
-"What can be so bad that you're carrying so much guilt? It's just an anniversary", you ask.
+"What can be so bad that you feel this guilty? It's just an anniversary", you ask.
 
 (Still crying) "You... You were constantly busy with work... going for meetings to different cities..."
 
@@ -258,14 +255,14 @@ They start crying uncontrollably. Nothing else needs to be said anymore.
 Both of you stay silent the whole way. You think hard about what to do. You think about how big the betrayal is, and whether you can forgive them for it. 
 You go to your room. Your partner has been crying the whole way, her face covered in her mascara.
 + [GO TO SLEEP WITHOUT SAYING ANYTHING]
-    {(negative(3))}
+    {(negative(2))}
     ~angry = true
 + [PUT A HAND ON THEIR HEAD]
     ~angry = false
     "We'll talk about this tomorrow. I'm not there yet, but I think I can forgive you. Please stop crying. It's late and we should go to bed."
     "I love you", you whisper to her.
     
-    She gives you a surprised look initially, which turns into a slight smile.
+    They give you a surprised look initially, which turns into a slight smile.
     
     You go to bed praying that things don't turn out the same way this time.
 -   -> time_ending
